@@ -2,25 +2,24 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Herbalife Nutrition</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iscriviti con noi - Herbalife Umbria e Marche</title>
   <style>
-    /* === STILE GENERALE === */
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #ffffff;
+      background-color: #f0fdf6;
       color: #333;
     }
 
     header {
-      background-color: #006341; /* Verde Herbalife */
+      background-color: #006341;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0.5em 1em; /* navbar più piccola */
+      padding: 0.7em 1.2em;
       position: relative;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     }
 
     .logo {
@@ -34,22 +33,20 @@
       gap: 1.5em;
       margin: 0;
       padding: 0;
-      font-size: 20px;
+      font-size: 18px;
     }
 
     nav ul li a {
       color: #fff;
       text-decoration: none;
-      font-weight: bold;
-      font-size: 0.95em;
+      font-weight: 600;
       transition: color 0.3s;
     }
 
     nav ul li a:hover {
-      color: #a8e6cf;
+      color: #bdf5df;
     }
 
-    /* === HAMBURGER === */
     .hamburger {
       display: none;
       font-size: 2rem;
@@ -59,7 +56,6 @@
       cursor: pointer;
     }
 
-    /* === MENU MOBILE === */
     @media (max-width: 768px) {
       .hamburger {
         display: block;
@@ -78,7 +74,7 @@
       }
 
       nav.open {
-        max-height: 300px;
+        max-height: 500px;
         transition: max-height 0.4s ease-in;
       }
 
@@ -93,52 +89,52 @@
       }
     }
 
-    /* === CONTENUTO PRINCIPALE === */
     main {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 3em 1em;
+      max-width: 900px;
+      margin: 2em auto;
+      padding: 2em;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
-    .logo-centrale {
-      max-width: 90%;
+    h1 {
+      color: #006341;
+      text-align: center;
+    }
+
+    iframe {
       width: 100%;
-      max-height: 500px;
-      object-fit: contain;
-    }
-
-    .prosegui-btn {
-      margin-top: 2em;
-      padding: 0.8em 2em;
-      background-color: #006341;
-      color: white;
-      font-size: 1.1em;
+      height: 1342px;
       border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
     }
 
-    .prosegui-btn:hover {
-      background-color: #059b63;
+    @media (max-width: 600px) {
+      main {
+        padding: 1em;
+      }
+
+      iframe {
+        height: 1400px;
+      }
+    }
+
+    .form-header-logo {
+      max-width: 25%;
+      display: block;
+      margin: 1em auto 2em auto;
     }
   </style>
 </head>
 <body>
   <header>
     <img src="LogoHerbalife.png" alt="Logo Herbalife" class="logo" />
-
-    <!-- Pulsante hamburger -->
     <button class="hamburger" id="hamburger">&#9776;</button>
-
-    <!-- Menu di navigazione -->
     <nav id="nav-menu">
       <ul>
         <li><a href="HomePage.html">Home</a></li>
         <li><a href="azienda.html">Azienda</a></li>
-        <li><a href="CosaFacciamo.html">Cosa facciamo</a></li>
+        <li><a href="CosaFacciamo.html">Cosa Facciamo</a></li>
         <li><a href="ChiSiamo.html">Chi Siamo</a></li>
         <li><a href="IscrivitiConNoi.html">Iscriviti</a></li>
       </ul>
@@ -146,15 +142,13 @@
   </header>
 
   <main>
-    <img src="LogoHerbalife.png" alt="Logo Herbalife grande" class="logo-centrale" />
-    <button class="prosegui-btn" onclick="location.href='azienda.html'">Entra nel sito</button>
+    <img src="LogoHerbalife.png" alt="Logo Herbalife Umbria e Marche" class="form-header-logo" />
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScIs6bqNY2B_msPzCjykbSTpptyogTVjxrhooJee8UmLqLz1Q/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Caricamento…</iframe>
   </main>
 
   <script>
-    // JavaScript per aprire/chiudere il menu su mobile
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
-
     hamburger.addEventListener('click', () => {
       navMenu.classList.toggle('open');
     });
