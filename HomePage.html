@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Herbalife Nutrition</title>
+  <style>
+    /* === STILE GENERALE === */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    header {
+      background-color: #006341; /* Verde Herbalife */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5em 1em; /* navbar più piccola */
+      position: relative;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      max-height: 60px;
+      width: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5em;
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.95em;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #a8e6cf;
+    }
+
+    /* === HAMBURGER === */
+    .hamburger {
+      display: none;
+      font-size: 2rem;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* === MENU MOBILE === */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+
+      nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #006341;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.3s ease-out;
+        z-index: 1000;
+      }
+
+      nav.open {
+        max-height: 300px;
+        transition: max-height 0.4s ease-in;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 1em 0;
+      }
+
+      nav ul li {
+        margin: 1em 0;
+      }
+    }
+
+    /* === CONTENUTO PRINCIPALE === */
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3em 1em;
+    }
+
+    .logo-centrale {
+      max-width: 90%;
+      width: 100%;
+      max-height: 500px;
+      object-fit: contain;
+    }
+
+    .prosegui-btn {
+      margin-top: 2em;
+      padding: 0.8em 2em;
+      background-color: #006341;
+      color: white;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .prosegui-btn:hover {
+      background-color: #059b63;
+    }
+  </style>
+</head>
+<body>
+   <header>
+    <img src="LogoHerbalife.png" alt="Logo Herbalife" class="logo" />
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="HomePage.html">Home</a></li>
+        <li><a href="azienda.html">Azienda</a></li>
+        <li><a href="CosaFacciamo.html">Cosa facciamo</a></li>
+        <li><a href="ChiSiamo.html">Chi Siamo</a></li>
+        <li><a href="IscrivitiConNoi.html">Iscriviti</a></li>
+        <li><a href="social.html">Social</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <img src="LogoHerbalife.png" alt="Logo Herbalife grande" class="logo-centrale" />
+    <button class="prosegui-btn" onclick="location.href='azienda.html'">Entra nel sito</button>
+  </main>
+
+  <script>
+    // JavaScript per aprire/chiudere il menu su mobile
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

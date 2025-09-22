@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Herbalife Nutrition - Azienda</title>
+  <style>
+    h2{
+      text-align: center;
+    }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0fdf6;
+  color: #333;
+}
+
+/* === NAVBAR === */
+header {
+  background-color: #006341;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7em 1.2em;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  max-height: 60px;
+  width: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #bdf5df;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* === RESPONSIVE NAV === */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #006341;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+    z-index: 1000;
+  }
+
+  nav.open {
+    max-height: 500px;
+    transition: max-height 0.4s ease-in;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0;
+  }
+
+  nav ul li {
+    margin: 1em 0;
+  }
+}
+
+/* === CONTENUTO PRINCIPALE === */
+main {
+  max-width: 900px;
+  margin: 2em auto;
+  padding: 2em;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #006341;
+  font-size: 2.2em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+h2 {
+  color: #007d53;
+  font-size: 1.6em;
+  margin-top: 1.5em;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  margin-bottom: 1em;
+}
+
+ul {
+  padding-left: 1.5em;
+  font-weight: 600;
+  margin-top: 1em;
+}
+
+ul li {
+  margin-bottom: 0.6em;
+}
+
+/* === RESPONSIVE ADJUSTMENTS === */
+@media (max-width: 600px) {
+  main {
+    padding: 1.5em 1em;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  p, ul li {
+    font-size: 1em;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+   <header>
+    <img src="LogoHerbalife.png" alt="Logo Herbalife" class="logo" />
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="HomePage.html">Home</a></li>
+        <li><a href="azienda.html">Azienda</a></li>
+        <li><a href="CosaFacciamo.html">Cosa facciamo</a></li>
+        <li><a href="ChiSiamo.html">Chi Siamo</a></li>
+        <li><a href="IscrivitiConNoi.html">Iscriviti</a></li>
+        <li><a href="social.html">Social</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <img src="LogoHerbalife.png" alt="Logo Herbalife Umbria e Marche" style="max-width: 25%; display: block; margin: 0 auto 1em auto;" />
+
+
+  <div style="padding: 20px; background-color: #f9f9f9; border-radius: 8px; max-width: 800px; margin: auto;">
+  <main>
+    <h1>L'Azienda</h1>
+    <h2>Chi è Herbalife Nutrition?</h2>
+    <p>
+      Herbalife Nutrition è un’azienda globale leader nel settore della nutrizione e del benessere. Fondata nel 1980, opera in oltre 90 Paesi attraverso milioni di incaricati indipendenti. L’azienda si dedica a trasformare la vita delle persone offrendo prodotti nutrizionali di alta qualità e un’opportunità commerciale flessibile.
+    </p>
+    <h2>I Prodotti</h2>
+    <p>
+      L'azienda propone una vasta gamma di prodotti per il controllo del peso, la nutrizione equilibrata, l’integrazione sportiva e la cura della pelle. Tutti i prodotti sono sviluppati scientificamente, con ingredienti accuratamente selezionati e testati secondo i più alti standard di qualità e sicurezza.
+    </p>
+    <h2>Missione</h2>
+    <p>
+      La missione di Herbalife Nutrition è aiutare le persone a vivere una vita più sana e attiva. Questo avviene tramite un supporto personalizzato, l’educazione alimentare e la promozione di uno stile di vita sostenibile e consapevole.
+    </p>
+    <h2>Impegno e Responsabilità</h2>
+    <p>
+      Herbalife Nutrition è impegnata anche a livello sociale attraverso la <strong>Herbalife Nutrition Foundation</strong>, che sostiene bambini e famiglie in difficoltà in tutto il mondo.
+    </p>
+    <h2>I valori fondamentali</h2>
+    <ul style="font-weight: bold;">
+      <li>Qualità e sicurezza</li>
+      <li>Innovazione scientifica</li>
+      <li>Etica e integrità</li>
+      <li>Successo condiviso</li>
+      <li>Sostenibilità e impatto positivo</li>
+    </ul>
+  </main>
+</div>
+
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

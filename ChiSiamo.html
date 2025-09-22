@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chi Siamo - Herbalife Umbria e Marche</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: garamond, serif;
+      background-color: #f0fdf6;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* === NAVBAR === */
+    header {
+      background-color: #006341;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.7em 1.2em;
+      width: 100%;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .logo {
+      max-height: 60px;
+      width: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5em;
+      margin: 0;
+      padding: 0;
+      font-size: 18px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #bdf5df;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 2rem;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* === RESPONSIVE NAV === */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+
+      nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #006341;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.3s ease-out;
+        z-index: 1000;
+      }
+
+      nav.open {
+        max-height: 500px;
+        transition: max-height 0.4s ease-in;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 1em 0;
+      }
+
+      nav ul li {
+        margin: 1em 0;
+      }
+    }
+
+    /* === CONTENUTO PRINCIPALE === */
+    main {
+      max-width: 900px;
+      margin: 2em auto;
+      padding: 2em;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #006341;
+      font-size: 2.2em;
+      margin-bottom: 0.5em;
+    }
+
+    h2 {
+      color: #007d53;
+      font-size: 1.6em;
+      margin-top: 1.5em;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.8;
+      margin-bottom: 1em;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 1em;
+      font-size: 1.1em;
+      font-weight: 600;
+    }
+
+    ul li {
+      margin-bottom: 0.6em;
+    }
+
+    .venditori ul li a {
+      color: #006341;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .venditori ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* === RESPONSIVE ADJUSTMENTS === */
+    @media (max-width: 600px) {
+      main {
+        padding: 1.5em 1em;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+
+      h2 {
+        font-size: 1.4em;
+      }
+
+      p, ul li {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="LogoHerbalife.png" alt="Logo Herbalife" class="logo" />
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="HomePage.html">Home</a></li>
+        <li><a href="azienda.html">Azienda</a></li>
+        <li><a href="CosaFacciamo.html">Cosa facciamo</a></li>
+        <li><a href="ChiSiamo.html">Chi Siamo</a></li>
+        <li><a href="IscrivitiConNoi.html">Iscriviti</a></li>
+        <li><a href="social.html">Social</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <img src="LogoHerbalife.png" alt="Logo Herbalife Umbria e Marche" style="max-width: 25%; display: block; margin: 2em auto;" />
+
+  <main>
+    <h2>Chi siamo?</h2>
+    <p>
+      Nasciamo come gruppo <strong>Umbria e Marche</strong> ma puntiamo a coprire grazie a voi tutte le regioni d'Italia.
+    </p>
+
+    <h2>Cosa Facciamo Come Gruppo</h2>
+    <p>Supportiamo centinaia di clienti ogni mese attraverso:</p>
+    <ul>
+      <li>Consigli personalizzati sul benessere e l'alimentazione</li>
+      <li>Eventi sportivi e incontri informativi dal vivo e online</li>
+      <li>Iniziative locali per promuovere uno stile di vita attivo</li>
+      <li>Formazione per nuovi incaricati e distributori</li>
+    </ul>
+
+    <h2>I Nostri Venditori</h2>
+    <p>Scopri chi fa parte del nostro gruppo e contatta il distributore più vicino a te:</p>
+
+    <div class="venditori">
+      <ul>
+        <li><a href="venditore-mario.html">Davide Spigarelli</a></li>
+        <li><a href="venditore-giulia.html">Sofia Bellucci</a></li>
+        <li><a href="venditore-luca.html">Wiktoria Catapano</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
