@@ -6,6 +6,49 @@
   <title>Chi Siamo - Herbalife Umbria e Marche</title>
 <link rel="stylesheet" href="style.css">
 
+  <style>
+    .cards-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5em;
+      max-width: 1000px;
+      margin: 2em auto 3em;
+      padding: 0 1em;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-bottom: 3px solid #006341;
+    }
+
+    .card p {
+      margin: 1em;
+      font-size: 1.1em;
+      color: #333;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+    @media (max-width: 600px) {
+      .cards-section {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WWL4TL8QKR"></script>
 <script>
@@ -53,13 +96,21 @@
     <h2>I Nostri Venditori</h2>
     <p>Scopri chi fa parte del nostro gruppo e contatta il distributore più vicino a te:</p>
 
-    <div class="venditori">
-      <ul>
-        <li><a href="https://docs.google.com/document/d/e/2PACX-1vTorS19kq9d8IGo8VqBK2GO_8ngCz3b5aVEiQEPoCz34equo_6U3RJOcZ6zbaqIf7hr9T3Tpzr2xkr4/pub">Davide Spigarelli (Sigillo)</a></li>
-        <li><a href="https://docs.google.com/document/d/e/2PACX-1vQ82FUbzPRf3ND7nVK4iT5a1JgnzQZSksYeYZH-Yjc1NlumEvzJXoqI3IBc_VGcCV1Eh7JlqgeaZzsJ/pub">Sofia Bellucci (Fabriano)</a></li>
-        <li><a href="https://docs.google.com/document/d/e/2PACX-1vT6t4cA_p6Nku9y_cBBzk-KSlevAya7BRbOCjSsDV-aDIYm8u6w7RZ5_aTPkRs701fQC5OlfKTnrJcc/pub">Wiktoria Catapano (Fabriano)</a></li>
-      </ul>
-    </div>
+      <!-- Sezione cards -->
+  <section class="cards-section">
+    <a href="https://docs.google.com/document/d/e/2PACX-1vTorS19kq9d8IGo8VqBK2GO_8ngCz3b5aVEiQEPoCz34equo_6U3RJOcZ6zbaqIf7hr9T3Tpzr2xkr4/pub" class="card">
+      <img src="https://www.youngteam.eu/wp-content/uploads/2025/10/Davide.jpg" alt="Immagine 1">
+      <p>Davide Spiagrelli (Sigillo)</p>
+    </a>
+    <a href="https://docs.google.com/document/d/e/2PACX-1vQ82FUbzPRf3ND7nVK4iT5a1JgnzQZSksYeYZH-Yjc1NlumEvzJXoqI3IBc_VGcCV1Eh7JlqgeaZzsJ/pub" class="card">
+      <img src="https://www.youngteam.eu/wp-content/uploads/2025/10/Sofia.jpeg" alt="Immagine 2">
+      <p>Sofia Bellucci (Fabriano)</p>
+    </a>
+    <a href="https://docs.google.com/document/d/e/2PACX-1vT6t4cA_p6Nku9y_cBBzk-KSlevAya7BRbOCjSsDV-aDIYm8u6w7RZ5_aTPkRs701fQC5OlfKTnrJcc/pub" class="card">
+      <img src="https://www.youngteam.eu/wp-content/uploads/2025/10/Wiktoria.jpeg" alt="Immagine 3">
+      <p>Wiktoria Catapano (Cerreto D’esi (AN))</p>
+    </a>
+  </section>
   </main>
 
   <script>
